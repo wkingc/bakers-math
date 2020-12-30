@@ -54,7 +54,8 @@ test_that("Valid bakersFormula object with expected values.", {
             water_base_percent = 78,
             leaven_base_percent = 12,
             flour_base_names = c("white", "wheat", "rye"),
-            flour_base_percent = c(80, 15, 5))
+            flour_base_percent = c(80, 15, 5),
+            other_percent = list(salt = 2, fat = 7))
   
   expect_true(validObject(t1))
   expect_equal(t1@total_flour_weight, 1000)
@@ -62,6 +63,7 @@ test_that("Valid bakersFormula object with expected values.", {
   expect_equal(t1@leaven_base_percent, 12)
   expect_equal(t1@flour_base_names, c("white", "wheat", "rye"))
   expect_equal(t1@flour_base_percent, c(80, 15, 5))
+  expect_equal(t1@other_percent, list(salt = 2, fat = 7))
 })
 
 

@@ -45,7 +45,8 @@ bakersFormula <- setClass(
     water_base_percent = "numeric", # The amount of water in the formula.
     leaven_base_percent = "numeric", # The leaven in the formula.
     flour_base_names = "character", # The names of each flour type in the starter.
-    flour_base_percent = "numeric" # The percentages of each flour type in the starter.
+    flour_base_percent = "numeric", # The percentages of each flour type in the starter.
+    other_percent = "list"
   ),
   
   prototype = list(
@@ -53,7 +54,8 @@ bakersFormula <- setClass(
     water_base_percent = numeric(),
     leaven_base_percent = numeric(),
     flour_base_names = character(),
-    flour_base_percent = numeric()
+    flour_base_percent = numeric(),
+    other_percent = list()
   )
 )
 
