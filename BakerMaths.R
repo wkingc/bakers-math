@@ -33,28 +33,3 @@ validStarterObject <- function(object) {
 }
 
 setValidity("bakersStarter", validStarterObject)
-
-t1 <- new("bakersStarter", 
-          mature_starter_percent = 20,
-          water_starter_percent = 80,
-          flour_starter_names = c("white", "wheat", "rye"), 
-          flour_starter_percent = c(80, 15, 5))
-
-t2 <- new("bakersStarter", 
-          mature_starter_percent = 20,
-          water_starter_percent = 80,
-          flour_starter_names = c("white", "wheat"), 
-          flour_starter_percent = c(80, 15, 5))
-
-t3 <- new("bakersStarter", 
-          mature_starter_percent = 20,
-          water_starter_percent = 80,
-          flour_starter_names = c("white", "wheat", "rye"), 
-          flour_starter_percent = c(80, 25, 25))
-
-t4 <- new("bakersStarter", 
-          mature_starter_percent = 20,
-          water_starter_percent = 80,
-          flour_starter_names = c("white", "wheat", "rye"), 
-          flour_starter_percent = c(80, 25))
-
