@@ -49,7 +49,7 @@ test_that("An invalid bakersStarter object where the number of flours and percen
 
 # Tests for bakersFormula objects
 test_that("Valid bakersFormula object with expected values.", {
-  t1 <- new("bakersFormula",
+  t2 <- new("bakersFormula",
             total_flour_weight = 1000,
             water_base_percent = 78,
             leaven_base_percent = 12,
@@ -57,13 +57,13 @@ test_that("Valid bakersFormula object with expected values.", {
             flour_base_percent = c(80, 15, 5),
             other_percent = list(salt = 2, fat = 7))
   
-  expect_true(validObject(t1))
-  expect_equal(t1@total_flour_weight, 1000)
-  expect_equal(t1@water_base_percent, 78)
-  expect_equal(t1@leaven_base_percent, 12)
-  expect_equal(t1@flour_base_names, c("white", "wheat", "rye"))
-  expect_equal(t1@flour_base_percent, c(80, 15, 5))
-  expect_equal(t1@other_percent, list(salt = 2, fat = 7))
+  expect_true(validObject(t2))
+  expect_equal(t2@total_flour_weight, 1000)
+  expect_equal(t2@water_base_percent, 78)
+  expect_equal(t2@leaven_base_percent, 12)
+  expect_equal(t2@flour_base_names, c("white", "wheat", "rye"))
+  expect_equal(t2@flour_base_percent, c(80, 15, 5))
+  expect_equal(t2@other_percent, list(salt = 2, fat = 7))
 })
 
 
