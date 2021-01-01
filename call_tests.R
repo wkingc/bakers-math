@@ -1,3 +1,3 @@
 library(testthat)
 
-test_file("BakerMathsTest.R")
+test_file("tests/BakerMathsTest.R")
