@@ -147,8 +147,8 @@ test_that("An invalid bakersFormula object where the number of flours and percen
 })
 
 # Tests for bakers_math (with leaven)
-test_that("The expected results for Pan De Campagne.", {
-  starter_1mature_4water_4white_1wheat <-
+test_that("The expected results for Pain De Campagne.", {
+  starter_1mature_4white_1wheat_4water <-
     new("bakersStarter",
         mature_starter_percent = 20,
         water_starter_percent = 80,
@@ -167,15 +167,18 @@ test_that("The expected results for Pan De Campagne.", {
         other_percent = c(2.1, 0.2),
         notes = "In a 70 deg kitchen, bulk fermentation should take about 5 hours.  In the fridge, the proof time is between 12-14 hours.")
   
-  pain_de_campagne_1m_4w_4wh_1wh_test <- bakers_math(object1 = starter_1mature_4water_4white_1wheat, object2 = pain_de_campagne)
+  pain_de_campagne_1mature_4white_1wheat_4water_test <- bakers_math(object1 = starter_1mature_4white_1wheat_4water, object2 = pain_de_campagne)
+  # pain_de_campagne_1mature_4white_1wheat_4water_test
+  # cat(pain_de_campagne_1mature_4white_1wheat_4water_test)
+  # save(pain_de_campagne_1mature_4white_1wheat_4water_test, file = "./tests/pain_de_campagne_1mature_4white_1wheat_4water.RData")
   
-  load("./pain_de_campagne_1m_4w_4wh_1wh.RData")
+  load("./pain_de_campagne_1mature_4white_1wheat_4water.RData")
   
-  expect_identical(pain_de_campagne_1m_4w_4wh_1wh_test, pain_de_campagne_1m_4w_4wh_1wh)
+  expect_identical(pain_de_campagne_1mature_4white_1wheat_4water_test, pain_de_campagne_1mature_4white_1wheat_4water)
 })
 
-test_that("The expected results for Pan De Campagne.", {
-  starter_1mature_4water_4white_1wheat <-
+test_that("The expected results for Overnight Country Blonde.", {
+  starter_1mature_4white_1wheat_4water <-
     new("bakersStarter",
         mature_starter_percent = 20,
         water_starter_percent = 80,
@@ -193,10 +196,38 @@ test_that("The expected results for Pan De Campagne.", {
         other_names = c("Fine sea salt"),
         other_percent = c(2.2),
         notes = "In a 70 deg kitchen, bulk fermentation should take 12-15 hours and the proof time should be about 4 hours.")
+  
+  overnight_country_blonde_1mature_4white_1wheat_4water_test <- bakers_math(object1 = starter_1mature_4white_1wheat_4water, object2 = overnight_country_blonde)
+  # overnight_country_blonde_1mature_4white_1wheat_4water_test
+  # cat(overnight_country_blonde_1mature_4white_1wheat_4water_test)
+  # save(overnight_country_blonde_1mature_4white_1wheat_4water_test, file = "./tests/overnight_country_blonde_1mature_4white_1wheat_4water.RData")
+  
+  load("./overnight_country_blonde_1mature_4white_1wheat_4water.RData")
+  
+  expect_identical(overnight_country_blonde_1mature_4white_1wheat_4water_test, overnight_country_blonde_1mature_4white_1wheat_4water)
+})
 
-  overnight_country_blonde_1m_4w_4wh_1wh_test <- bakers_math(object1 = starter_1mature_4water_4white_1wheat, object2 = overnight_country_blonde)
+test_that("The starter includes more flour types than the formula.", {
+  starter_1mature_4white_0.5wheat_0.25rye_0.25semolina <-
+    new("bakersStarter",
+        mature_starter_percent = 20,
+        water_starter_percent = 80,
+        flour_starter_names = c("White flour", "Wheat flour", "Rye flour", "Semolina flour"),
+        flour_starter_percent = c(80, 10, 5, 5))
   
-  load("./overnight_country_blonde_1m_4w_4wh_1wh.RData")
+  pain_de_campagne <-
+    new("bakersFormula",
+        formula_name = "Pain De Campagne",
+        total_flour_weight = 1000,
+        water_base_percent = 78,
+        leaven_base_percent = 20,
+        flour_base_names = c("White flour", "Wheat flour"),
+        flour_base_percent = c(90, 10),
+        other_names = c("Fine sea salt", "Instant dried yeast"),
+        other_percent = c(2.1, 0.2),
+        notes = "In a 70 deg kitchen, bulk fermentation should take about 5 hours.  In the fridge, the proof time is between 12-14 hours.")
   
-  expect_identical(overnight_country_blonde_1m_4w_4wh_1wh_test, overnight_country_blonde_1m_4w_4wh_1wh)
+  expect_error(bakers_math(object1 = starter_1mature_4white_0.5wheat_0.25rye_0.25semolina, object2 = pain_de_campagne), 
+                           "The starter includes flour not part of the original formula (rye flour, semolina flour) and will increase the total flour weight beyond 1000g.", 
+                           fixed = TRUE)
 })

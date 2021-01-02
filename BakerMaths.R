@@ -142,19 +142,27 @@ setMethod(f = "bakers_math",
             leaven_in_formula = (total_flour_weight*leaven_base_percent)
             names(leaven_in_formula) <- "Leaven"
             
-            # Harmonize flours from the leaven with flours from the formula.
+            # Set differences between the flours in the formula and flours in the starter.
             flour_shared <- intersect(names(flour_base_percent), names(flour_starter_percent))
-            flour_diff <- setdiff(names(flour_base_percent), names(flour_starter_percent))
+            flour_base_diff <- setdiff(names(flour_base_percent), names(flour_starter_percent))
+            flour_starter_diff <- setdiff(names(flour_starter_percent), names(flour_base_percent))
             flour_union <- union(names(flour_base_percent), names(flour_starter_percent))
+            # If there are more flours in the in the starter than formula, fail with an error message.
+            if(length(flour_starter_diff) > 0) {
+              stop(paste("The starter includes flour not part of the original formula (", tolower(paste(flour_starter_diff, collapse = ", ")), 
+                         ") and will increase the total flour weight beyond ", object2@total_flour_weight, "g.", sep = ""))
+            }
             
+            # Harmonize flours from the leaven with flours from the formula.
             flour_base_percent <- flour_base_percent[flour_union]
             
-            leaven_zeros <- rep(0, length(flour_diff))
-            names(leaven_zeros) <- flour_diff
+            leaven_zeros <- rep(0, length(flour_base_diff))
+            names(leaven_zeros) <- flour_base_diff
             
             flour_starter_percent <- c(flour_starter_percent, leaven_zeros)
             flour_starter_percent <- flour_starter_percent[flour_union]
-            
+
+            # I cannot think of how it would happen, but in case the flour harmonization fails, this will catch it.
             if(!all(names(flour_base_percent) == names(flour_starter_percent))) stop("The flour harmonization failed.  Please contact the webmaster.")
             
             # The flour contributed to the formula from the leaven
