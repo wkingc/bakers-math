@@ -176,7 +176,6 @@ setMethod(f = "bakers_math",
             water_total_no_leaven <- water_total - water_from_leaven
             
             # The total amount of flour assuming that the flours in the starter and formula are the same.
-            if(!all(names(flour_base_percent) == names(flour_from_leaven))) stop("The names of flour in the starter and the names of the flour in the formula don't match")
             flour_total <- total_flour_weight*flour_base_percent
             flour_total_no_leaven <- flour_total - flour_from_leaven
             

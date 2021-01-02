@@ -1,4 +1,4 @@
-# PAIN DE CAMPAGNE
+# Pain De Campagne
 starter_1mature_4water_4white_1wheat <-
   new("bakersStarter",
       mature_starter_percent = 20,
@@ -24,14 +24,6 @@ pain_de_campagne_1m_4w_4wh_1wh
 # save(pain_de_campagne_1m_4w_4wh_1wh, file = "./tests/pain_de_campagne_1m_4w_4wh_1wh.RData")
 
 
-
-
-
-
-
-
-
-
 # Overnight Country Blonde
 starter_1mature_4water_4white_1wheat <-
   new("bakersStarter",
@@ -54,8 +46,6 @@ overnight_country_blonde <-
 
 overnight_country_blonde_1m_4w_4wh_1wh <- bakers_math(object1 = starter_1mature_4water_4white_1wheat, object2 = overnight_country_blonde)
 overnight_country_blonde_1m_4w_4wh_1wh
-# cat(pain_de_campagne_1m_4w_4wh_1wh)
-# save(pain_de_campagne_1m_4w_4wh_1wh, file = "./tests/pain_de_campagne_1m_4w_4wh_1wh.RData")
+# cat(overnight_country_blonde_1m_4w_4wh_1wh)
+# save(overnight_country_blonde_1m_4w_4wh_1wh, file = "./tests/overnight_country_blonde_1m_4w_4wh_1wh.RData")
 
-object1 = starter_1mature_4water_4white_1wheat
-object2 = overnight_country_blonde
