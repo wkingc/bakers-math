@@ -168,9 +168,9 @@ test_that("The expected results for Pain De Campagne.", {
         notes = "In a 70 deg kitchen, bulk fermentation should take about 5 hours.  In the fridge, the proof time is between 12-14 hours.")
   
   pain_de_campagne_1mature_4white_1wheat_4water_test <- bakers_math(object1 = starter_1mature_4white_1wheat_4water, object2 = pain_de_campagne)
-  # pain_de_campagne_1mature_4white_1wheat_4water_test
-  # cat(pain_de_campagne_1mature_4white_1wheat_4water_test)
-  # save(pain_de_campagne_1mature_4white_1wheat_4water_test, file = "./tests/pain_de_campagne_1mature_4white_1wheat_4water.RData")
+  # pain_de_campagne_1mature_4white_1wheat_4water <- pain_de_campagne_1mature_4white_1wheat_4water_test
+  # cat(pain_de_campagne_1mature_4white_1wheat_4water)
+  # save(pain_de_campagne_1mature_4white_1wheat_4water, file = "./tests/pain_de_campagne_1mature_4white_1wheat_4water.RData")
   
   load("./pain_de_campagne_1mature_4white_1wheat_4water.RData")
   
@@ -198,9 +198,9 @@ test_that("The expected results for Overnight Country Blonde.", {
         notes = "In a 70 deg kitchen, bulk fermentation should take 12-15 hours and the proof time should be about 4 hours.")
   
   overnight_country_blonde_1mature_4white_1wheat_4water_test <- bakers_math(object1 = starter_1mature_4white_1wheat_4water, object2 = overnight_country_blonde)
-  # overnight_country_blonde_1mature_4white_1wheat_4water_test
-  # cat(overnight_country_blonde_1mature_4white_1wheat_4water_test)
-  # save(overnight_country_blonde_1mature_4white_1wheat_4water_test, file = "./tests/overnight_country_blonde_1mature_4white_1wheat_4water.RData")
+  # overnight_country_blonde_1mature_4white_1wheat_4water <- overnight_country_blonde_1mature_4white_1wheat_4water_test
+  # cat(overnight_country_blonde_1mature_4white_1wheat_4water)
+  # save(overnight_country_blonde_1mature_4white_1wheat_4water, file = "./tests/overnight_country_blonde_1mature_4white_1wheat_4water.RData")
   
   load("./overnight_country_blonde_1mature_4white_1wheat_4water.RData")
   
