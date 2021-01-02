@@ -228,6 +228,6 @@ test_that("The starter includes more flour types than the formula.", {
         notes = "In a 70 deg kitchen, bulk fermentation should take about 5 hours.  In the fridge, the proof time is between 12-14 hours.")
   
   expect_error(bakers_math(object1 = starter_1mature_4white_0.5wheat_0.25rye_0.25semolina, object2 = pain_de_campagne), 
-                           "The starter includes flour not part of the original formula (rye flour, semolina flour) and will increase the total flour weight beyond 1000g.", 
-                           fixed = TRUE)
+               "The starter includes flour not part of the original formula (rye flour, semolina flour) and will increase the total flour weight beyond 1000g.", 
+               fixed = TRUE)
 })
