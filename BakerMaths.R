@@ -85,24 +85,64 @@ validFormulaObject <- function(object) {
 
 setValidity("bakersFormula", validFormulaObject)
 
+# Baker's math generic
 setGeneric(name = "bakers_math", def = function(object1, object2) standardGeneric("bakers_math"))
 
-# Baker's math with bakers yeast
-## Use object of class bakersFormula
+# Baker's math with bakers yeast -- Uses object of class bakersFormula
+setMethod(f = "bakers_math",
+          signature = c("bakersFormula"),
+          definition = function(object1)
+          {
+            # Formula name and notes
+            formula_name = object1@formula_name
+            notes = object1@notes
+            
+            # Total flour weight
+            total_flour_weight = object1@total_flour_weight
+            names(total_flour_weight) <- "TFL"
+            
+            # Convert formula percents to decimal values
+            water_base_percent = object1@water_base_percent/100
+            names(water_base_percent) <- "Water"
+            
+            flour_base_percent = object1@flour_base_percent/100
+            names(flour_base_percent) <- object1@flour_base_names
+            
+            other_percent = object1@other_percent/100
+            names(other_percent) <- object1@other_names
+            
+            # The amount of water in the formula
+            water_total = water_base_percent*total_flour_weight
+            
+            # The total amount of flour in the formula
+            flour_total <- total_flour_weight*flour_base_percent
+            
+            # The total amount of the other ingredients
+            other_total <- total_flour_weight*other_percent
+            
+            # Create the output table
+            tab <- cbind(
+              c(names(flour_base_percent), names(water_base_percent), names(other_percent)),
+              c(flour_total, water_total, other_total),
+              c(flour_base_percent*100, water_base_percent*100, other_percent*100)
+            )
+            
+            colnames(tab) <- c("Ingredient", "Quantity (g)", "Baker's Percentage (%)")
+            rownames(tab) <- NULL
+            
+            ktab <- kbl(tab, escape = F, caption = formula_name) %>%
+              kable_styling(bootstrap_options = c("striped", "hover")) %>%
+              row_spec(0, color = "#8B0D1A") %>%
+              column_spec(1, background = "#E7E5E4", bold = T) %>%
+              column_spec(2, background = "#E7E5E4") %>% 
+              column_spec(3, background = "#F4F3F3") %>%
+              footnote(general = notes)
 
-# setMethod(f = "bakers_math",
-#           signature = c("bakersFormula"),
-#           definition = function(object1)
-#           {
-#             print(object1@total_flour_weight)
-#           }
-# )
-# 
-# bakers_math(t2)
+            return(ktab)
+          }
+)
 
-# Baker's math with natural leaven
-## Use object of class bakersStarter and bakersFormula
-
+# Baker's math with natural leaven -- Uses object of class bakersStarter and bakersFormula
 setMethod(f = "bakers_math",
           signature = c("bakersStarter", "bakersFormula"),
           definition = function(object1, object2)
@@ -222,7 +262,7 @@ setMethod(f = "bakers_math",
               kable_styling(bootstrap_options = c("striped", "hover")) %>%
               row_spec(0, color = "#8B0D1A") %>%
               column_spec(1, background = "#E7E5E4", bold = T) %>%
-              column_spec(2, background = "#E7E5E4", border_right = T) %>%
+              column_spec(2, background = "#E7E5E4") %>%
               column_spec(3:5, background = "#F4F3F3") %>%
               add_header_above(c("Final Dough" = 2, "Baker's Formula" = 3), color = "#8B0D1A") %>%
               footnote(general = notes, 

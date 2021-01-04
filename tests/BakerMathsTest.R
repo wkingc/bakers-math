@@ -146,8 +146,53 @@ test_that("An invalid bakersFormula object where the number of flours and percen
                fixed = TRUE)
 })
 
-# Tests for bakers_math (with leaven)
-test_that("The expected results for Pain De Campagne.", {
+# Tests for bakers_math (with bakers yeast)
+test_that("The expected results for Saturday White Bread.", {
+  saturday_white_bread <-
+    new("bakersFormula",
+        formula_name = "Saturday White Bread",
+        total_flour_weight = 1000,
+        water_base_percent = 72,
+        flour_base_names = c("White flour"),
+        flour_base_percent = c(100),
+        other_names = c("Fine sea salt", "Instant dried yeast"),
+        other_percent = c(2.1, 0.4),
+        notes = "In A 70 degree kitchen, the bulk fermentation should take about 5 hours.  The proof time in the same, is about 1 1/4 hours.")
+  
+  saturday_white_bread_bakers_yeast_test <- bakers_math(object1 = saturday_white_bread)
+  # saturday_white_bread_bakers_yeast <- saturday_white_bread_bakers_yeast_test
+  # cat(saturday_white_bread_bakers_yeast)
+  # save(saturday_white_bread_bakers_yeast, file = "./tests/saturday_white_bread_bakers_yeast.RData")
+  
+  load("./saturday_white_bread_bakers_yeast.RData")
+  
+  expect_identical(saturday_white_bread_bakers_yeast_test, saturday_white_bread_bakers_yeast)
+})
+
+test_that("The expected results for Saturday Wheat Bread.", {
+  saturday_wheat_bread <-
+    new("bakersFormula",
+        formula_name = "Saturday Wheat Bread",
+        total_flour_weight = 1000,
+        water_base_percent = 80,
+        flour_base_names = c("White flour", "Wheat"),
+        flour_base_percent = c(75, 25),
+        other_names = c("Fine sea salt", "Instant dried yeast"),
+        other_percent = c(2.2, 0.3),
+        notes = "In A 70 degree kitchen, the bulk fermentation should take about 5 hours.  The proof time in the same, is about 1 1/4 hours.")
+  
+  saturday_wheat_bread_bakers_yeast_test <- bakers_math(object1 = saturday_wheat_bread)
+  # saturday_wheat_bread_bakers_yeast <- saturday_wheat_bread_bakers_yeast_test
+  # cat(saturday_wheat_bread_bakers_yeast)
+  # save(saturday_wheat_bread_bakers_yeast, file = "./tests/saturday_wheat_bread_bakers_yeast.RData")
+  
+  load("./saturday_wheat_bread_bakers_yeast.RData")
+  
+  expect_identical(saturday_wheat_bread_bakers_yeast_test, saturday_wheat_bread_bakers_yeast)
+})
+
+# Tests for bakers_math (with natural leaven)
+test_that("The expected results for Pain De Campagn.", {
   starter_1mature_4white_1wheat_4water <-
     new("bakersStarter",
         mature_starter_percent = 20,
