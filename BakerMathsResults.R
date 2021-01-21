@@ -4,11 +4,11 @@ source("./BakerMaths.R")
   # 1:1.6:0.4:2 (1:2:2)
     # 65g old starter; 104g white; 26g wheat; 130g water = 325g starter 
     # 50% old starter; 80% white; 20% wheat; 0% other; 100% water
-starter_1mature_1.6white_0.4wheat_2water <-
+starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <-
   new("bakersStarter",
       mature_starter_percent = 50,
       water_starter_percent = 100,
-      flour_starter_names = c("White flour", "Wheat flour"),
+      flour_starter_names = c("All purpose white flour", "Whole wheat flour"),
       flour_starter_percent = c(80, 20))
 
 waimees_sourdough_sandwich_loaf_0.5kg <-
@@ -17,7 +17,7 @@ waimees_sourdough_sandwich_loaf_0.5kg <-
       total_flour_weight = 500,
       water_base_percent = 78,
       leaven_base_percent = 20,
-      flour_base_names = c("White flour", "Wheat flour"),
+      flour_base_names = c("All purpose white flour", "Whole wheat flour"),
       flour_base_percent = c(90, 10),
       other_names = c("Fine sea salt", "Instant dried yeast"),
       other_percent = c(2.1, 0.2),
@@ -27,104 +27,9 @@ waimees_sourdough_sandwich_loaf_0.5kg <-
         3) Bulk ferment the dough until it has doubled or tripled in size (about 5 hours in a 70-degree kitchen).  Build up the dough's gluten structure by performing four stretch-and-folds in the first two hours of the bulk ferment.
         4) After the bulk ferment, create a sausage-roll loaf with tension, put it in a greased 2 lb loaf pan, and prove overnight in the fridge.
         5) Remove the dough from the fridge in the morning and bake when it crests the top of the loaf pan (about three hours in a 70-degree kitchen).
-        Comment:  The inclusion of a little bit of baker's yeast helps create a fluffy loaf and doesn't compromise the sourdough flavor.
+        Comment:  The inclusion of a little bit of baker's yeast helps create a more fluffy sandwich loaf and doesn't compromise the sourdough flavor.
       ")
 
-# waimees_sourdough_sandwich_loaf_0.5kg_1mature_1.6white_0.4wheat_2water <- bakers_math(starter_1mature_1.6white_0.4wheat_2water, waimees_sourdough_sandwich_loaf_0.5kg)
-# save_kable(waimees_sourdough_sandwich_loaf_0.5kg_1mature_1.6white_0.4wheat_2water, file = "./formula/waimees_sourdough_sandwich_loaf_0.5kg_1mature_1.6white_0.4wheat_2water.pdf")
-# waimees_sourdough_sandwich_loaf_0.5kg_1mature_1.6white_0.4wheat_2water
-# 
-# pain_de_campagne_1kg <-
-#   new("bakersFormula",
-#       formula_name = "Pain De Campagne (1 kg)",
-#       total_flour_weight = 1000,
-#       water_base_percent = 78,
-#       leaven_base_percent = 20,
-#       flour_base_names = c("White flour", "Wheat flour"),
-#       flour_base_percent = c(90, 10),
-#       other_names = c("Fine sea salt", "Instant dried yeast"),
-#       other_percent = c(2.1, 0.2),
-#       notes = "In A 70 degree kitchen, the bulk fermentation should take about 5 hours.  The proof time in the same is about 12-14 hours.  This dough needs three or four folds.")
-# 
-# pain_de_campagne_1kg_1mature_1.6white_0.4wheat_2water <- bakers_math(starter_1mature_1.6white_0.4wheat_2water, pain_de_campagne_1kg)
-# save_kable(pain_de_campagne_1kg_1mature_1.6white_0.4wheat_2water, file = "./formula/pain_de_campagne_1kg_1mature_1.6white_0.4wheat_2water.pdf")
-# pain_de_campagne_1kg_1mature_1.6white_0.4wheat_2water
-# 
-# overnight_white_0.5kg <-
-#   new("bakersFormula",
-#       formula_name = "Overnight White (0.5 kg)",
-#       total_flour_weight = 500,
-#       water_base_percent = 78,
-#       leaven_base_percent = 12,
-#       flour_base_names = c("White flour", "Wheat flour"),
-#       flour_base_percent = c(90, 10),
-#       other_names = c("Fine sea salt"),
-#       other_percent = 2.2,
-#       notes = "In a 70 degree kitchen, bulk fermentation should take 12-15 hours.  Proof time in the same will take about 4 hours.  After the autolease and mix, the target dough temperature is 77-78 degrees.  The bread is too wet to knead by hand, so use 4 stretch and folds instead.")
-# 
-# overnight_white_0.5kg_1mature_1.6white_0.4wheat_2water <- bakers_math(starter_1mature_1.6white_0.4wheat_2water, overnight_white_0.5kg)
-# save_kable(overnight_white_0.5kg_1mature_1.6white_0.4wheat_2water, file = "./formula/overnight_white_0.5kg_1mature_1.6white_0.4wheat_2water.pdf")
-# overnight_white_0.5kg_1mature_1.6white_0.4wheat_2water
-# 
-# overnight_white_1kg <-
-#   new("bakersFormula",
-#       formula_name = "Overnight White (1 kg)",
-#       total_flour_weight = 1000,
-#       water_base_percent = 78,
-#       leaven_base_percent = 12,
-#       flour_base_names = c("White flour", "Wheat flour"),
-#       flour_base_percent = c(90, 10),
-#       other_names = c("Fine sea salt"),
-#       other_percent = 2.2,
-#       notes = "In a 70 degree kitchen, bulk fermentation should take 12-15 hours.  Proof time in the same will take about 4 hours.  After the autolease and mix, the target dough temperature is 77-78 degrees.  The bread is too wet to knead by hand, so use 4 stretch and folds instead.")
-# 
-# overnight_white_1kg_1mature_1.6white_0.4wheat_2water <- bakers_math(starter_1mature_1.6white_0.4wheat_2water, overnight_white_1kg)
-# save_kable(overnight_white_1kg_1mature_1.6white_0.4wheat_2water, file = "./formula/overnight_white_1kg_1mature_1.6white_0.4wheat_2water.pdf")
-# overnight_white_1kg_1mature_1.6white_0.4wheat_2water
-# 
-# saturday_white_bread_0.5kg <-
-#   new("bakersFormula",
-#       formula_name = "Saturday White Bread (0.5 kg)",
-#       total_flour_weight = 500,
-#       water_base_percent = 72,
-#       flour_base_names = c("White flour"),
-#       flour_base_percent = c(100),
-#       other_names = c("Fine sea salt", "Instant dried yeast"),
-#       other_percent = c(2.1, 0.4),
-#       notes = "In A 70 degree kitchen, the bulk fermentation should take about 5 hours.  The proof time in the same is about 1 1/4 hours.")
-# 
-# saturday_white_bread_0.5kg_bakers_yeast <- bakers_math(saturday_white_bread_0.5kg)
-# save_kable(saturday_white_bread_0.5kg_bakers_yeast, file = "./formula/saturday_white_bread_0.5kg_bakers_yeast.pdf")
-# saturday_white_bread_0.5kg_bakers_yeast
-# 
-# wheat_bread_1kg <-
-#   new("bakersFormula",
-#       formula_name = "Whole Wheat Leaven Bread (1 kg)",
-#       total_flour_weight = 1000,
-#       water_base_percent = 82,
-#       leaven_base_percent = 20,
-#       flour_base_names = c("White flour", "Wheat flour"),
-#       flour_base_percent = c(25, 75),
-#       other_names = c("Fine sea salt", "Instant dried yeast"),
-#       other_percent = c(2.1, 0.175),
-#       notes = "In A 70 degree kitchen, the bulk fermentation should take about 5 hours.  The proof time in the fridge is about 12-13 hours.")
-# 
-# wheat_bread_1kg_1mature_1.6white_0.4wheat_2water <- bakers_math(starter_1mature_1.6white_0.4wheat_2water, wheat_bread_1kg)
-# save_kable(wheat_bread_1kg_1mature_1.6white_0.4wheat_2water, file = "./formula/wheat_bread_1kg_1mature_1.6white_0.4wheat_2water.pdf")
-# wheat_bread_1kg_1mature_1.6white_0.4wheat_2water
-# 
-# wheat_bread_0.5kg <-
-#   new("bakersFormula",
-#       formula_name = "Whole Wheat Leaven Bread (0.5 kg)",
-#       total_flour_weight = 500,
-#       water_base_percent = 82,
-#       leaven_base_percent = 20,
-#       flour_base_names = c("White flour", "Wheat flour"),
-#       flour_base_percent = c(25, 75),
-#       other_names = c("Fine sea salt", "Instant dried yeast"),
-#       other_percent = c(2.1, 0.175),
-#       notes = "In A 70 degree kitchen, the bulk fermentation should take about 5 hours.  The proof time in the fridge is about 12-13 hours.")
-# 
-# wheat_bread_0.5kg_1mature_1.6white_0.4wheat_2water <- bakers_math(starter_1mature_1.6white_0.4wheat_2water, wheat_bread_0.5kg)
-# save_kable(wheat_bread_0.5kg_1mature_1.6white_0.4wheat_2water, file = "./formula/wheat_bread_0.5kg_1mature_1.6white_0.4wheat_2water.pdf")
-# wheat_bread_0.5kg_1mature_1.6white_0.4wheat_2water
+waimees_sourdough_sandwich_loaf_0.5kg_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_sourdough_sandwich_loaf_0.5kg)
+save_kable(waimees_sourdough_sandwich_loaf_0.5kg_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_sourdough_sandwich_loaf_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water.pdf")
+waimees_sourdough_sandwich_loaf_0.5kg_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
