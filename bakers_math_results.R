@@ -1,4 +1,4 @@
-source("./BakerMaths.R")
+source("./bakers_math.R")
 
 # starter
   # 1:1.6:0.4:2 (1:2:2)
