@@ -1,4 +1,4 @@
-source("../bakerMaths.R")
+source("../bakers_math.R")
 
 # Tests for bakersStarter objects
 test_that("Valid bakersStarter object with expected values.", {
