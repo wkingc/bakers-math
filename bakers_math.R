@@ -20,6 +20,8 @@ bakersStarter <- setClass(
     )
 )
 
+install.packages(c("callr", "crayon", "desc", "pkgload", "processx", "ps", "tibble", "withr"))
+
 validStarterObject <- function(object) {
     v1 <- length(object@flour_starter_names) == length(object@flour_starter_percent)
     v2 <- sum(object@flour_starter_percent) == 100
