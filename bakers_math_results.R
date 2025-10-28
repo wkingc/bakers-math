@@ -45,6 +45,28 @@ save_kable(waimees_levained_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.
 
 waimees_levained_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
 
+################################################
+# Waimee's Naturally Levained Sandwich Bread 2 #
+################################################
+waimees_levained_sandwich_bread2 <-
+    new(
+        "bakersFormula",
+        formula_name = "Waimee's Naturally Levained Sandwich Bread",
+        total_flour_weight = 400,
+        water_base_percent = 78,
+        levain_base_percent = 15,
+        flour_base_names = c("All purpose flour", "Whole wheat flour"),
+        flour_base_percent = c(90, 10),
+        other_names = c("Fine sea salt", "Sugar", "Unsalted butter", "Non-fat dry milk", "Potato flour"),
+        other_percent = c(2, 9.5, 15.5, 9.5, 11.5), 
+        notes = "")
+
+waimees_levained_sandwich_bread2_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_levained_sandwich_bread2)
+
+save_kable(waimees_levained_sandwich_bread2_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_levained_sandwich_loaf2.pdf")
+
+waimees_levained_sandwich_bread2_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
+
 ###############################################################
 # Waimee's Naturally Levained Hearth Bread (Daytime Schedule) #
 ###############################################################
