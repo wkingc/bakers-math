@@ -269,7 +269,7 @@ setMethod(
             add_header_above(c("Final Dough" = 2, "Baker's Formula" = 3), color = "#8B0D1A") %>%
             footnote(
                 general = notes, 
-                symbol = c(starter_ratios_cat, "The baker's percentage for levain is the amount of flour in the levain expressed as a percentage of the total flour in the recipie.")
+                symbol = c(starter_ratios_cat, "The baker's percentage for levain is the amount of flour in the levain expressed as a percentage of the total flour in the recipe.")
             )
         
         return(ktab)
