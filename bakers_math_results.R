@@ -14,13 +14,13 @@ starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <-
         flour_starter_names = c("All purpose flour", "Whole wheat flour"),
         flour_starter_percent = c(80, 20))
 
-##############################################
-# Waimee's Naturally Levained Sandwich Bread #
-##############################################
-waimees_levained_sandwich_bread <-
+###########################
+# Waimee's Sandwich Bread #
+###########################
+waimees_sandwich_bread <-
     new(
         "bakersFormula",
-        formula_name = "Waimee's Naturally Levained Sandwich Bread (2,340 kcal)",
+        formula_name = "Waimee's Sandwich Bread (2,340 kcal)",
         total_flour_weight = 400,
         water_base_percent = 78,
         levain_base_percent = 15,
@@ -37,19 +37,19 @@ waimees_levained_sandwich_bread <-
         7) Preheat your oven 350 degrees and bake the loaf for 35-40 minutes, tenting with alimuminum foil after 10-15 minutes if the top is browning too quickly.
         8) Remove cooked loaf from its tin and place on a cooling rack for a minimum of one hour, but preferably two hours, before slicing.")
 
-waimees_levained_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_levained_sandwich_bread)
+waimees_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_sandwich_bread)
 
-save_kable(waimees_levained_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_levained_sandwich_loaf.pdf")
+save_kable(waimees_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_sandwich_loaf.pdf")
 
-waimees_levained_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
+waimees_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
 
-############################################
-# Waimee's Naturally Levained Hearth Bread #
-############################################
-waimees_levained_hearth_bread <-
+#########################
+# Waimee's Hearth Bread #
+#########################
+waimees_hearth_bread <-
     new(
         "bakersFormula",
-        formula_name = "Waimee's Naturally Levained Hearth Bread (Daytime Schedule)",
+        formula_name = "Waimee's Hearth Bread (1807 kcal)",
         total_flour_weight = 500,
         water_base_percent = 78,
         levain_base_percent = 12,
@@ -66,11 +66,11 @@ waimees_levained_hearth_bread <-
         7) After 20 minutes remove the baking vessel cover and bake for another 25 minutes, or until your desired crust color is achieved.
         8) Place the cooked loaf on a cooling rack for a minimum of one hour, but preferably two hours, before slicing.")
 
-waimees_levained_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_levained_hearth_bread)
+waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_hearth_bread)
 
-save_kable(waimees_levained_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_levained_hearth_bread.pdf")
+save_kable(waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_hearth_bread.pdf")
 
-waimees_levained_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
+waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
 
 ########################################
 # Waimee's Pizza Dough (3 Dough Balls) #
@@ -78,7 +78,7 @@ waimees_levained_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_whe
 waimees_pizza_dough_3balls <-
     new(
         "bakersFormula",
-        formula_name = "Waimee's Pizza Dough (3 Dough Balls) (Daytime Schedule)",
+        formula_name = "Waimee's Pizza Dough (3 Dough Balls) (1816 kcal)",
         total_flour_weight = 500,
         water_base_percent = 70,
         levain_base_percent = 12,
