@@ -49,7 +49,7 @@ waimees_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_
 waimees_hearth_bread <-
     new(
         "bakersFormula",
-        formula_name = "Waimee's Hearth Bread (1807 kcal)",
+        formula_name = "Waimee's Hearth Bread (1,807 kcal)",
         total_flour_weight = 500,
         water_base_percent = 78,
         levain_base_percent = 12,
@@ -78,7 +78,7 @@ waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_wa
 waimees_pizza_dough_3balls <-
     new(
         "bakersFormula",
-        formula_name = "Waimee's Pizza Dough (3 Dough Balls) (1816 kcal)",
+        formula_name = "Waimee's Pizza Dough (3 Dough Balls) (1,816 kcal)",
         total_flour_weight = 500,
         water_base_percent = 70,
         levain_base_percent = 12,
