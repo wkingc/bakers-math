@@ -22,7 +22,7 @@ waimees_sandwich_bread <-
         "bakersFormula",
         formula_name = "Waimee's Sandwich Bread (2,340 kcal)",
         total_flour_weight = 400,
-        water_base_percent = 78,
+        water_base_percent = 75,
         levain_base_percent = 15,
         flour_base_names = c("All purpose flour", "Whole wheat flour"),
         flour_base_percent = c(90, 10),
@@ -31,7 +31,7 @@ waimees_sandwich_bread <-
         notes = "1) Feed your levain with 80 degree water and keep it at room temperature until it has doubled in size from the build-up of gas (approx. 8-10 hours).  If the starter smells like over-ripe fruit, indicating a buildup of lactic acid, you will end up with a more buttery flavour.  If the starter goes longer, it will begin to have a vinergary smell, indicating a buildup of acetic acid, and the final loaf will be more sour.
         2) Mix the wheat flours with 90-95 degree water in a tub and let the dough autolyse for about 30 minutes before incorporating the remaining ingredients using the pencer method (see https://www.youtube.com/watch?v=HoY7CPw0E1s for a demonstration).  The target temperature of the dough at the end of the final mix is 77-78 degrees.
         3) Bulk ferment the dough until it has roughly doubled in size from the build up of gas (approx. 8-9 hours).  Build up the dough's gluten structure by performing four stretch-and-folds at 30 minute intervals during the bulk ferment's first two hours (see https://www.youtube.com/watch?v=CQHuWDEo3SA for a demonstration).
-        5) After the bulk ferment, preshape the dough into a round with a slight amount of tension, and let it benchrest for 15 minutes.  Afterward, flour the top of the dough, flip, and create a sausage-roll loaf with tension by pushing it back as you roll it (see https://www.youtube.com/watch?v=jIzKcred_lc).  Put the loaf seam-side down in a greased 2 lb loaf pan and loosely cover it (a disposable plastic shower cap works well!).
+        5) After the bulk ferment, preshape the dough into a round with a slight amount of tension, and let it benchrest for 15 minutes.  Afterward, flour the top of the dough, flip, and create a sausage-roll loaf with tension by pushing it back as you roll it (see https://www.youtube.com/watch?v=jIzKcred_lc for a demonstation of the shaping technique).  Put the loaf seam-side down in a greased 2 lb loaf pan and loosely cover it (a disposable plastic shower cap works well!).
         6) Let the dough rise until it has crested about 1 inch above the rim of the pan (approx. 2 hours).  If you don't have time to bake it the same day, this final proof can also be done in the refrigerator.
         7) Preheat your oven to 350 degrees and bake the loaf for 35-40 minutes, tenting it with aluminum foil after 25-30 minutes if the top is browning too quickly.
         8) Remove baked loaf from its tin and place on a cooling rack for a minimum of one hour, but preferably two hours, before slicing.")
