@@ -22,7 +22,7 @@ waimees_sandwich_bread <-
         "bakersFormula",
         formula_name = "Waimee's Sandwich Bread (2,340 kcal)",
         total_flour_weight = 400,
-        water_base_percent = 75,
+        water_base_percent = 78,
         levain_base_percent = 15,
         flour_base_names = c("All purpose flour", "Whole wheat flour"),
         flour_base_percent = c(90, 10),
