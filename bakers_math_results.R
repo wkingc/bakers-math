@@ -27,7 +27,7 @@ waimees_sandwich_bread <-
         flour_base_names = c("All purpose flour", "Whole wheat flour"),
         flour_base_percent = c(90, 10),
         other_names = c("Fine sea salt", "Sugar", "Unsalted butter", "Non-fat dry milk", "Potato flour"),
-        other_percent = c(2, 4.75, 15.5, 9.5, 11.5),
+        other_percent = c(2, 9.5, 15.5, 9.5, 11.5),
         notes = "1) Feed your levain with 80 degree water and keep it at room temperature until it has doubled in size from the build-up of gas (approx. 8-10 hours).  If the starter smells like over-ripe fruit, indicating a buildup of lactic acid, you will end up with a more buttery flavour.  If the starter goes longer, it will begin to have a vinergary smell, indicating a buildup of acetic acid, and the final loaf will be more sour.
         2) Mix the wheat flours with 90-95 degree water in a tub and let the dough autolyse for about 30 minutes before incorporating the remaining ingredients using the pencer method (see https://www.youtube.com/watch?v=HoY7CPw0E1s for a demonstration).  The target temperature of the dough at the end of the final mix is 77-78 degrees.
         3) Bulk ferment the dough until it has roughly doubled in size from the build up of gas (approx. 8-9 hours).  Build up the dough's gluten structure by performing four stretch-and-folds at 30 minute intervals during the bulk ferment's first two hours (see https://www.youtube.com/watch?v=CQHuWDEo3SA for a demonstration).
