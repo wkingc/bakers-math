@@ -48,36 +48,7 @@ waimees_sandwich_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_
 waimees_hearth_bread <-
     new(
         "bakersFormula",
-        formula_name = "Waimee's Hearth Bread (1,807 kcal)",
-        total_flour_weight = 500,
-        water_base_percent = 78,
-        levain_base_percent = 12,
-        flour_base_names = c("Bread flour", "Whole wheat flour", "All purpose flour"),
-        flour_base_percent = c(80.4, 10, 9.6),
-        other_names = c("Fine sea salt"),
-        other_percent = c(2.2),
-        notes = "1) Feed your levain with 80 degree water and keep it at room temperature until it has doubled in size from the build-up of gas (approx. 8-10 hours).  If the starter smells like over-ripe fruit, indicating a buildup of lactic acid, you will end up with a more buttery flavour.  If the starter goes longer, it will begin to have a vinegary smell, indicating a buildup of acetic acid, and the final loaf will be more sour.
-        2) Mix the flour with 90-95 degree water in a tub and let the dough autolyse for about 30 minutes before incorporating the remaining ingredients using the pencer method (see https://www.youtube.com/watch?v=HoY7CPw0E1s for a demonstration).  The target temperature of the dough at the end of the final mix is 77-78 degrees. 
-        3) Bulk ferment the dough until it has roughly doubled in size from the build up of gas (approx. 8-9 hours).  Build up the dough's gluten structure by performing four stretch-and-folds at 30 minute intervals during the bulk ferment's first two hours (see https://www.youtube.com/watch?v=CQHuWDEo3SA for a demonstration).
-        4) After the bulk ferment, preshape the dough into a round with a slight amount of tension, and let it benchrest for 15 minutes.
-        5) Create a batard or boule and place it seam-side up in a 50% flour/50% rice flour seasoned proofing basket (see https://www.youtube.com/watch?v=O6INjgO91mg&t=130s for batard shaping technique).  Loosely cover the proofing basket (a disposable plastic shower cap works well!) and put in a refrigerator to proof for 12-14 hours.
-        6) Preheat your baking vessel (see https://challengerbreadware.com/product/challenger-bread-pan/ for my recommendation) in the oven for an hour at 450 degrees.  Place your proofed bread in the baking vessel and score.  If there is enough room without touching the bread, add one or two ice cubes for extra steam.  Bake for 20 minutes.
-        7) After 20 minutes remove the baking vessel cover and bake for another 25 minutes, or until your desired crust color is achieved.
-        8) Place the cooked loaf on a cooling rack for a minimum of one hour, but preferably two hours, before slicing.")
-
-waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_hearth_bread)
-
-save_kable(waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_hearth_bread.pdf")
-
-waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
-
-########################################
-# Waimee's Soft(er)-Crust Hearth Bread #
-########################################
-waimees_sc_hearth_bread <-
-    new(
-        "bakersFormula",
-        formula_name = "Waimee's Soft(er) Crust Hearth Bread (1,807 kcal)",
+        formula_name = "Waimee's Hearth Bread (1,942 kcal)",
         total_flour_weight = 500,
         water_base_percent = 78,
         levain_base_percent = 12,
@@ -94,11 +65,11 @@ waimees_sc_hearth_bread <-
         7) After 20 minutes remove the baking vessel cover and bake for another 25 minutes, or until your desired crust color is achieved.
         8) Place the cooked loaf on a cooling rack for a minimum of one hour, but preferably two hours, before slicing.")
 
-waimees_sc_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_sc_hearth_bread)
+waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water <- bakers_math(starter_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, waimees_hearth_bread)
 
-save_kable(waimees_sc_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_sc_hearth_bread.pdf")
+save_kable(waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water, file = "./formula/waimees_hearth_bread.pdf")
 
-waimees_sc_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
+waimees_hearth_bread_1pt_mature_1.6pt_all_purpose_white_0.4pt_whole_wheat_2pt_water
 
 ########################################
 # Waimee's Pizza Dough (3 Dough Balls) #
