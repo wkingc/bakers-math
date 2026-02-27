@@ -81,8 +81,8 @@ waimees_pizza_dough_3balls <-
         total_flour_weight = 500,
         water_base_percent = 70,
         levain_base_percent = 12,
-        flour_base_names = c("All purpose flour", "Whole wheat flour"),
-        flour_base_percent = c(97.6, 2.4),
+        flour_base_names = c("Caputo '00'", "All purpose flour", "Whole wheat flour"),
+        flour_base_percent = c(88, 9.6, 2.4),
         other_names = "Fine sea salt",
         other_percent = 2.8,
         notes = "1) Feed your levain with 80 degree water and keep it at room temperature until it has doubled in size from the build-up of gas (approx. 8-10 hours).  If the starter smells like over-ripe fruit, indicating a buildup of lactic acid, you will end up with a more buttery flavour.  If the starter goes longer, it will begin to have a vinegary smell, indicating a buildup of acetic acid, and the final loaf will be more sour.
